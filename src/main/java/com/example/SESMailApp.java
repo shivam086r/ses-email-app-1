@@ -1,8 +1,5 @@
 package com.example;
 
-import com.amazonaws.auth.AWSCredentials;
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailService;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClientBuilder;
 import com.amazonaws.services.simpleemail.model.*;
@@ -15,20 +12,9 @@ public class SESMailApp {
     private static final String BODY = "This is a test email sent using AWS SES";
 
     public static void main(String[] args) {
-        // AWS SES access credentials (replace these with your credentials)
-        String accessKey = "AWS_ACCESS_KEY";
-        String secretKey = "AWS_SECRET_ACCESS_kEY";
-
-        if (accessKey == null || secretKey == null || accessKey.isEmpty() || secretKey.isEmpty()) {
-            System.out.println("AWS credentials not properly set.");
-            return;
-        }
-
-        // AWS SES Configuration for Mumbai region (ap-south-1)
-        AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
+        // Initialize the SES client using the default credential provider chain
         AmazonSimpleEmailService sesClient = AmazonSimpleEmailServiceClientBuilder.standard()
                 .withRegion("ap-south-1")  // Mumbai region
-                .withCredentials(new AWSStaticCredentialsProvider(credentials))
                 .build();
 
         try {
