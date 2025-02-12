@@ -1,6 +1,6 @@
 ### Commands ###
 
-ssh -i <ssh-key> ec2-user@IP
+ssh -i <ssh-key-location> ec2-user@IP
 
 sudo yum install java-17-amazon-corretto
 
