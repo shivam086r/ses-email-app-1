@@ -1,6 +1,6 @@
 ### Commands ###
 
-ssh -i SES-Java.pem ubuntu@IP
+ssh -i SES-Java.pem ec-user@IP
 
 sudo yum install java-11-amazon-corretto
 
