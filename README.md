@@ -2,7 +2,7 @@
 
 ssh -i SES-Java.pem ec-user@IP
 
-sudo yum install java-17-amazon-corretto
+sudo yum install java-17-amazon-corretto -y
 
 java -version
 
