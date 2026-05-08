@@ -7,7 +7,7 @@ import com.amazonaws.services.simpleemail.model.*;
 public class SESMailApp {
 
     private static final String FROM = "shivamrahangdale92@gmail.com";  // SES Verified email
-    private static final String TO = "shivamrahangdale92@gmail.com";            // Recipient email
+    private static final String TO = "shivam.rahangdale@paybyte.company";            // Recipient email
     private static final String SUBJECT = "Test Email from SES";
     private static final String BODY = "This is a test email sent using AWS SES";
 
